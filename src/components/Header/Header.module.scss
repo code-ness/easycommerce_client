@@ -1,0 +1,45 @@
+.header {
+  padding: 2rem 0;
+  color: #53555a;
+  &Logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #195d51;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-bottom: 0.3rem;
+    }
+  }
+  
+  &Nav {
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        margin: 0 1rem;
+        a {
+          color: inherit;
+          font-size: 1.6rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &Profile {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      color: inherit;
+      font-size: 1.6rem;
+      text-decoration: none;
+    }
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+}
