@@ -1,0 +1,16 @@
+.logo {
+  cursor: pointer;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #195d51;
+    }
+  }
+  svg {
+    margin-bottom: 0.3rem;
+  }
+}

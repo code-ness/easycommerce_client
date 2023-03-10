@@ -1,17 +1,7 @@
 .header {
   padding: 2rem 0;
+  background-color: #fbf7ec;
   color: #53555a;
-  &Logo {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #195d51;
-    display: flex;
-    align-items: center;
-
-    svg {
-      margin-bottom: 0.3rem;
-    }
-  }
   
   &Nav {
     ul {
@@ -30,10 +20,18 @@
   &Profile {
     display: flex;
     justify-content: flex-end;
-    a {
+    a, button {
+      margin-left: 1rem;
+      margin-right: 1rem;
       color: inherit;
       font-size: 1.6rem;
       text-decoration: none;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      font-family: inherit;
+      cursor: pointer;
     }
   }
 }

@@ -5,7 +5,7 @@ function Root() {
   return (
     <div className={styles.root}>
       <Header />
-      <div style={{height: "calc(100vh - 74px)"}}></div>
+      <div style={{height: "calc(100vh - 75px)"}}></div>
     </div>
   )
 }

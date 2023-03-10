@@ -1,16 +1,19 @@
 import Container from "../Container/Container";
+import { Link } from "react-router-dom";
+import {useAuth} from "../../hooks/useAuth";
+
 import styles from "./Header.module.scss";
-import {ReactComponent as Logo} from "../../assets/logo.svg";
+import Logo from "../Logo/Logo";
 
 function Header() {
+  const {user, login, logout} = useAuth();
+
+  const authLogout = user ? <button onClick={() => logout()}>Log Out</button> : <Link to="/login">Sign In</Link>;
+  const userProfile = user ? <Link to="/profile">Profile</Link> : "";
   return (
     <header className={styles.header}>
       <Container stylesProp={styles.container}>
-        <div className={styles.headerLogo}>
-          <Logo />
-          <h3>EasyCommerce</h3>
-        </div>
-
+        <Logo />
         <nav className={styles.headerNav}>
           <ul>
             <li>
@@ -26,7 +29,8 @@ function Header() {
         </nav>
 
         <div className={styles.headerProfile}>
-          <a href="#">Login</a>
+          {authLogout}
+          {userProfile}
         </div>
       </Container>
     </header>
